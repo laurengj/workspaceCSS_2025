@@ -87,5 +87,15 @@ section.intro{
     position: relative;
     left: 0;
     top: 5%;
-    
+    width: 30%;
+    height: 80vh;
+    padding: 1%;
+    background-image: url(../img/newspaper1.jpg)
+}
+
+div.explanation h3, div.requirements h3{
+    margin-top: -10%;
+    width: 100px;
+    border: 3px dashed black;
+    background-color: pink
 }

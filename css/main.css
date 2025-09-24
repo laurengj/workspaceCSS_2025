@@ -1,0 +1,91 @@
+/** 00 css variable **/
+:root{
+    --body-color: hsl(0, 40%, 68%);
+    --page-color: hsla(0, 50%, 87%, 0.6);
+    --side-bar: hsla(0, 50%, 87%, 0.6);
+    --page-width: 45%;
+    --page-top: 90%
+    --botom-bar-height: 15vh;
+}
+
+
+
+
+/** 01 color **/
+body{
+    background-color: var(--body-color);
+}
+
+
+/** 02 color **/
+#zen-intro{
+    background-color: var(--page-color);
+
+}
+
+/** 03 color **/
+.sidebar{
+    background-color: var(--side-bar);
+}
+
+/** Try h1 **/
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: hsl(358, 40%, 19%);
+}
+
+div.explanation, div.requirements, div.participation, div.benefits{
+    position: fixed;
+    width: var(--page-width);
+    top: var(--page-top);
+    background-image: url(../img/fall.jpg);
+}
+
+div.explanation{
+    left: 0%
+}
+
+div.requirements{
+    left: 16%
+}
+
+div.participation{
+    left: 50%
+}
+
+div.benefits{
+    left: 80%
+}
+
+.sidebar{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    width: 20%
+}
+
+div.extra2{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: var(--bottom-bar-height);
+}
+
+div.extra1{
+    position: fixed;
+    left: 20%;
+    width: 40%
+    height: 100vh;
+    
+}
+
+/* Do the Introduction Layout */
+
+section.intro{
+    position: relative;
+    left: 0;
+    top: 5%;
+    
+}

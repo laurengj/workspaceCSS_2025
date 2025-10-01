@@ -39,6 +39,8 @@ div.explanation, div.requirements, div.participation, div.benefits{
     width: var(--page-width);
     top: var(--page-top);
     background-image: url(../img/fall.jpg);
+
+    transition: all 4s ease-in-out;
 }
 
 div.explanation{
@@ -98,4 +100,94 @@ div.explanation h3, div.requirements h3{
     width: 100px;
     border: 3px dashed black;
     background-color: pink
+}
+
+/** 03 Typography **/
+@font-face{
+    font-family: 'myfont';
+    src: url(../fonts/chunkfive.eot)
+}
+
+header h1{
+    font-family: 'myfont', sans-serif;
+    font-weight: 100;
+    font-size: 1.25e;
+    letter-spacing: normal;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+header h2{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    letter-spacing: normal;
+    line-height: 1em;
+    text-transform: lowercase;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+#design-selection h3{
+    visibility: hidden;
+    /*
+    display: none;
+    */
+}
+
+/* please hide the archives and resources */
+
+section.intro h3 ~ p{
+    text-transform: capitalize;
+    transform: rotate(90);
+    text-decoration: ;
+    transition: all 4s ease-in-out;
+}
+
+section.intro h3:hover ~p{
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+footer{
+    position: fixed;
+    bottom: 1vh;
+    z-index: 4;
+    /* animation */
+    animation: 3s infinite backandforth;
+}
+
+@keyframes backandforth{
+    from{}
+    25%{}
+    50%{}
+    75%{}
+    to{}
+}
+
+h2{
+    background-image: linear-gradient(0deg,hsl(305, 51%, 77%),rgb(230, 172, 212),rgb(228, 168, 181));
+    /* animation */
+    animation: 1s infinite running changeColor;
+}
+
+@keyframes changeColor{
+    from{background-image: linear-gradient(90deg,hsl(305, 51%, 77%),rgb(230, 172, 212),rgb(228, 168, 181))}
+    50%{background-image: linear-gradient(180deg,hsl(305, 51%, 77%),rgb(230, 172, 212),rgb(228, 168, 181) )}
+    to{background-image: linear-gradient(270deg,hsl(305, 51%, 77%),rgb(230, 172, 212),rgb(228, 168, 181) )}
+}
+
+
+
+
+/* fancy stuff */
+aside.sidefar{
+    clip-path: polygon(0 0, 0 60%, 50% 100%, 90% 60%, 90% 0);
+    /* clip-path: circle(60% at 50vm 50vh); */
 }

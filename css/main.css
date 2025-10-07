@@ -1,193 +1,174 @@
-/** 00 css variable **/
-:root{
-    --body-color: hsl(0, 40%, 68%);
-    --page-color: hsla(0, 50%, 87%, 0.6);
-    --side-bar: hsla(0, 50%, 87%, 0.6);
-    --page-width: 45%;
-    --page-top: 90%
-    --botom-bar-height: 15vh;
-}
 
+body {
 
+    background-color: hsl(0, 40%, 68%);
 
-
-/** 01 color **/
-body{
-    background-color: var(--body-color);
-}
-
-
-/** 02 color **/
-#zen-intro{
-    background-color: var(--page-color);
-
-}
-
-/** 03 color **/
-.sidebar{
-    background-color: var(--side-bar);
-}
-
-/** Try h1 **/
-h1{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: hsl(358, 40%, 19%);
-}
-
-div.explanation, div.requirements, div.participation, div.benefits{
-    position: fixed;
-    width: var(--page-width);
-    top: var(--page-top);
-    background-image: url(../img/fall.jpg);
-
-    transition: all 4s ease-in-out;
-}
-
-div.explanation{
-    left: 0%
-}
-
-div.requirements{
-    left: 16%
-}
-
-div.participation{
-    left: 50%
-}
-
-div.benefits{
-    left: 80%
-}
-
-.sidebar{
-    position: absolute;
-    top: 20%;
-    right: 0;
-    bottom: 0;
-    width: 20%
-}
-
-div.extra2{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: var(--bottom-bar-height);
-}
-
-div.extra1{
-    position: fixed;
-    left: 20%;
-    width: 40%
-    height: 100vh;
+    font-family: Arial, sans-serif; 
     
-}
+    color: hsl(358, 40%, 19%);
 
-/* Do the Introduction Layout */
+    margin: 0;
 
-section.intro{
-    position: relative;
-    left: 0;
-    top: 5%;
-    width: 30%;
-    height: 80vh;
-    padding: 1%;
-    background-image: url(../img/newspaper1.jpg)
-}
+    padding: 0;
 
-div.explanation h3, div.requirements h3{
-    margin-top: -10%;
-    width: 100px;
-    border: 3px dashed black;
-    background-color: pink
-}
+  }
+  
+  
+/* used to get the newspaper image as background */
+  .page-wrapper {
 
-/** 03 Typography **/
-@font-face{
-    font-family: 'myfont';
-    src: url(../fonts/chunkfive.eot)
-}
+    width: 70%; 
 
-header h1{
-    font-family: 'myfont', sans-serif;
-    font-weight: 100;
-    font-size: 1.25e;
-    letter-spacing: normal;
-    line-height: 1em;
-    text-transform: uppercase;
-}
+    background-image: url('../img/newspaper1.jpg'); 
+    background-size: cover;  
+    background-position: center;
+    background-attachment: scroll;
 
-header h2{
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 500;
-    font-size: 36px;
-    letter-spacing: normal;
-    line-height: 1em;
-    text-transform: lowercase;
-}
+    margin: 20px auto; 
+    padding: 15px;
+    box-sizing: border-box;
 
-a{
-    text-decoration: none;
-}
+  }
+  
 
-li{
-    list-style-type: none;
-}
+  header h1 {
 
-#design-selection h3{
-    visibility: hidden;
-    /*
-    display: none;
-    */
-}
+    text-align: center;
+    font-weight: normal; 
 
-/* please hide the archives and resources */
+    font-family: Georgia, serif;
 
-section.intro h3 ~ p{
-    text-transform: capitalize;
-    transform: rotate(90);
-    text-decoration: ;
-    transition: all 4s ease-in-out;
-}
+    margin-bottom: 10px;
 
-section.intro h3:hover ~p{
-    opacity: 0;
-    transform: scale(0.5);
-}
+  }
+  
 
-footer{
+
+  header h2 {
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    font-size: 26px;
+
+    padding: 10px;
+    width: 60%;
+    margin: 0 auto;
+
+    background-image: linear-gradient(0deg, hsl(305, 51%, 77%), rgb(230, 172, 212), rgb(228, 168, 181));
+
+    /* animation for header */
+    animation: changeColor 4s infinite;
+
+
+  }
+  
+
+  /* keyframe animation for header */
+  @keyframes changeColor {
+
+    from {
+      background-image: linear-gradient(90deg, hsl(305, 51%, 77%), rgb(230, 172, 212),rgb(228, 168, 181));
+    }
+
+    50% {
+      background-image: linear-gradient(180deg,hsl(305, 51%, 77%), hsl(319, 54%, 79%), hsl(347, 53%, 78%));
+    }
+
+    to {
+      background-image: linear-gradient(270deg, hsl(305, 51%, 77%), hsl(319, 54%, 79%), hsl(347, 53%, 78%));
+    }
+
+
+  }
+  
+
+
+  
+  h3 {
+
+    color: hsl(358, 40%, 19%);
+    border-bottom: 1px solid hsl(358, 40%, 19%);
+    padding-bottom: 3px;
+
+  }
+  
+
+
+  /* sidefar fixed on right side of page */
+  .sidebar {
+
     position: fixed;
-    bottom: 1vh;
-    z-index: 4;
-    /* animation */
-    animation: 3s infinite backandforth;
-}
 
-@keyframes backandforth{
-    from{}
-    25%{}
-    50%{}
-    75%{}
-    to{}
-}
+    top: 20%;
+    right: 2%;
+    width: 20%;
 
-h2{
-    background-image: linear-gradient(0deg,hsl(305, 51%, 77%),rgb(230, 172, 212),rgb(228, 168, 181));
-    /* animation */
-    animation: 1s infinite running changeColor;
-}
+    background-color: hsla(0, 50%, 87%, 0.7);
 
-@keyframes changeColor{
-    from{background-image: linear-gradient(90deg,hsl(305, 51%, 77%),rgb(230, 172, 212),rgb(228, 168, 181))}
-    50%{background-image: linear-gradient(180deg,hsl(305, 51%, 77%),rgb(230, 172, 212),rgb(228, 168, 181) )}
-    to{background-image: linear-gradient(270deg,hsl(305, 51%, 77%),rgb(230, 172, 212),rgb(228, 168, 181) )}
-}
+    padding: 10px;
+
+    box-sizing: border-box;
 
 
+  }
+  
+
+  .sidebar ul {
 
 
-/* fancy stuff */
-aside.sidefar{
-    clip-path: polygon(0 0, 0 60%, 50% 100%, 90% 60%, 90% 0);
-    /* clip-path: circle(60% at 50vm 50vh); */
-}
+    list-style-type: none;
+
+    padding: 0;
+
+    margin: 0;
+
+  }
+  
+
+  .sidebar li {
+
+    margin-bottom: 5px;
+
+  }
+  
+
+  .sidebar a {
+
+    text-decoration: none;
+    color: hsl(358, 40%, 19%);
+    font-weight: normal;
+
+  }
+  
+
+  .sidebar a:hover {
+    color: darkred;
+
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: hsl(358, 40%, 19%);
+  }
+  
+
+
+  a:hover {
+    color: darkred;
+  }
+
+
+  
+  footer {
+
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: normal;
+
+  }
+  
+
+  
